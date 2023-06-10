@@ -21,7 +21,7 @@ class IframeView {
 			allowPopups: false
 		}, options || {});
 
-		this.id = "epubjs-view-" + uuid();
+		this.id = "epubjs-view-1223" + uuid();
 		this.section = section;
 		this.index = section.index;
 
