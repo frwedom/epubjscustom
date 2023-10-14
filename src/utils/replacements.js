@@ -131,6 +131,7 @@ export function substitute(content, urls, replacements) {
 			// Account for special characters in the file name.
 			// See https://stackoverflow.com/a/6318729.
 			url = url.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+			url = decodeURIComponent(url);
 			content = content.replace(new RegExp(url, "g"), replacements[i]);
 		}
 	});

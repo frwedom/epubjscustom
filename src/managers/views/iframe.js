@@ -21,7 +21,7 @@ class IframeView {
 			allowPopups: false
 		}, options || {});
 
-		this.id = "epubjs-view-1223" + uuid();
+		this.id = "epubjs-view-" + uuid();
 		this.section = section;
 		this.index = section.index;
 
@@ -84,11 +84,13 @@ class IframeView {
 
 		this.iframe = document.createElement("iframe");
 		this.iframe.id = this.id;
-		this.iframe.scrolling = "no"; // Might need to be removed: breaks ios width calculations
+		// this.iframe.scrolling = "no"; // Might need to be removed: breaks ios width calculations
 		this.iframe.style.overflow = "hidden";
 		this.iframe.seamless = "seamless";
 		// Back up if seamless isn't supported
 		this.iframe.style.border = "none";
+		// this.iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+		this.iframe.allow='autoplay';
 
 		// sandbox
 		this.iframe.sandbox = "allow-same-origin";

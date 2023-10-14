@@ -39,6 +39,97 @@ class Archive {
 	 */
 	open(input, isBase64){
 		return this.zip.loadAsync(input, {"base64": isBase64});
+
+		// return this.zip
+        //     .loadAsync(input, {
+        //         decodeFileName: function (bytes) {
+        //             return iconv.decode(bytes, "Windows-1251");
+        //         },
+        //     })
+        //     .then(function (archive) {
+        //         const fileNames = Object.keys(archive.files);
+
+        //         // Прочитайте и обработайте файлы
+        //         // fileNames.forEach((fileName) => {
+        //         //     archive
+        //         //         .file(fileName)
+        //         //         .async("text")
+        //         //         .then((content) => {
+        //         //             // Обработайте содержимое файла
+        //         //             console.log(`Содержимое файла "${fileName}":`);
+        //         //             console.log(content);
+        //         //         });
+        //         // });
+
+        //         fileNames.forEach((fileName) => {
+        //             archive
+        //                 .file(fileName)
+        //                 .async("text")
+        //                 .then((content) => {
+        //                     if (fileName.endsWith(".xhtml")) {
+        //                         archive
+        //                             .file(fileName)
+        //                             .async("text")
+        //                             .then((content) => {
+        //                                 try {
+        //                                     // Декодируйте содержимое файла с использованием decodeURIComponent
+        //                                     const decodedContent =
+        //                                         decodeURIComponent(content);
+
+        //                                     // Обработайте декодированное содержимое файла
+        //                                     console.log(
+        //                                         `Содержимое файла "${fileName}":`
+        //                                     );
+        //                                     // console.log(decodedContent);
+
+        //                                     // Если декодирование прошло успешно, перезапишите decodedContent обратно в файл в архиве
+        //                                     // archive.file(
+        //                                     //     fileName,
+        //                                     //     decodedContent,
+        //                                     //     { binary: true }
+        //                                     // );
+        //                                 } catch (error) {
+        //                                     // Обработка ошибки декодирования
+        //                                     console.error(
+        //                                         `Ошибка при декодировании файла "${fileName}":`,
+        //                                         error
+        //                                     );
+        //                                 }
+        //                             });
+        //                     }
+        //                     // Декодируйте содержимое файла с использованием decodeURIComponent
+        //                     // let decodedContent;
+        //                     // try {
+        //                     //     decodedContent = decodeURIComponent(content);
+
+        //                     //     // Обработайте декодированное содержимое файла
+        //                     //     console.log(`Содержимое файла "${fileName}":`);
+        //                     //     console.log(decodedContent);
+        //                     //     // archive.file(fileName, decodedContent, {
+        //                     //     //     binary: true,
+        //                     //     // });
+        //                     // } catch (e) {
+        //                     //     console.log(e);
+        //                     // }
+
+        //                     // if (decodedContent) {
+        //                     //     archive.file(fileName, decodedContent, {
+        //                     //         binary: true,
+        //                     //     });
+        //                     // }
+        //                 });
+        //         });
+
+        //         console.log("Windows-1251 decode");
+        //         console.log(Object.keys(archive.files));
+        //     })
+        //     .then((content) => {
+        //         // Обработайте содержимое файла
+        //         console.log(content);
+        //     })
+        //     .catch((error) => {
+        //         console.error("Произошла ошибка:", error);
+        //     });
 	}
 
 	/**
