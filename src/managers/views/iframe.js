@@ -89,8 +89,8 @@ class IframeView {
 		this.iframe.seamless = "seamless";
 		// Back up if seamless isn't supported
 		this.iframe.style.border = "none";
-		// this.iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-		this.iframe.allow='autoplay';
+		this.iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+		//this.iframe.allow='autoplay';
 
 		// sandbox
 		this.iframe.sandbox = "allow-same-origin";
