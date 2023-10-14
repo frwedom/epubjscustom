@@ -84,12 +84,12 @@ class IframeView {
 
 		this.iframe = document.createElement("iframe");
 		this.iframe.id = this.id;
-		// this.iframe.scrolling = "no"; // Might need to be removed: breaks ios width calculations
+		this.iframe.scrolling = "no"; // Might need to be removed: breaks ios width calculations // Здесь хз
 		this.iframe.style.overflow = "hidden";
 		this.iframe.seamless = "seamless";
 		// Back up if seamless isn't supported
 		this.iframe.style.border = "none";
-		this.iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+		//this.iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
 		//this.iframe.allow='autoplay';
 
 		// sandbox
